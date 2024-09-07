@@ -11,7 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        third: "rgba(36, 36, 36, .4)",
       },
+      backgroundImage: {
+        "header-pattern": "url('/img/hero.png')",
+      }
     },
   },
   plugins: [],

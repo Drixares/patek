@@ -1,101 +1,136 @@
-import Image from "next/image";
+import CollectionSection from "@/components/layout/collection";
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
+import LastCreationsSection from "@/components/layout/lastCreations";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Header />
+      <LastCreationsSection />
+      <CollectionSection />
+      <div className="mt-40 ml-40">
+        <div className="flex items-center justify-between h-[378px] w-full">
+          <div className="h-full flex flex-col justify-between">
+            <div className="flex flex-col gap-5">
+              <h2 className="uppercase text-6xl">
+                Manufacture genevoise <br />
+                indépendante en mains <br />
+                familiales
+              </h2>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <p className="uppercase text-lg text-third max-w-96 leading-1">
+                Le pouvoir de l'indépendance, une totale liberté de création
+              </p>
+            </div>
+
+            <div>
+              <div className="text-third py-4 px-5 bg-[#F3F3F3] inline-flex items-center gap-3">
+                <span className="uppercase">découvrir</span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                >
+                  <path
+                    d="M13 5H19V11"
+                    stroke="#242424"
+                    strokeOpacity={0.4}
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                  <path
+                    d="M18.5 5.5L5 19"
+                    stroke="#242424"
+                    strokeOpacity={0.4}
+                    stroke-width="2"
+                    stroke-linecap="square"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="h-full w-[842px]"
+            style={{
+              backgroundImage: "url('/img/image_17.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className="w-full flex items-center justify-center my-20">
+        <div className="flex items-center gap-5">
+          <span className="w-2.5 h-2.5 bg-third rotate-45" />
+          <span className="w-2.5 h-2.5 bg-[#242424] opacity-30 rotate-45" />
+          <span className="w-2.5 h-2.5 bg-[#242424] opacity-20 rotate-45" />
+          <span className="w-2.5 h-2.5 bg-[#242424] opacity-10 rotate-45" />
+        </div>
+      </div>
+      <div className="mr-40">
+        <div
+          className="w-full h-[588px]"
+          style={{
+            backgroundImage: "url('/img/image_29.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      </div>
+
+      <div className="my-40 pl-40">
+        <div>
+          <h2 className="text-[#242424] text-6xl uppercase">
+            détaillants agréés
+          </h2>
+          <div className="max-w-4xl mt-6 flex flex-col gap-5">
+            <p className="text-third uppercase text-lg">
+              Localisez le détaillant le plus proche en utilisant notre outil
+              de recherche. La base de données fournit le nom des revendeurs,
+              leur adresse et dans certains cas leur numéro de téléphone.
+            </p>
+            <p className="text-third uppercase text-lg">
+              Si le nom d'un revendeur ne figure pas dans notre base de
+              données, c'est qu'il ne s'agit pas d'un détaillant Patek
+              Philippe agréé.
+            </p>
+          </div>
+
+          <div className="mt-20">
+            <div className="text-third py-4 px-5 bg-[#F3F3F3] inline-flex items-center gap-3">
+              <span className="uppercase">découvrir</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <path
+                  d="M13 5H19V11"
+                  stroke="#242424"
+                  strokeOpacity={0.4}
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+                <path
+                  d="M18.5 5.5L5 19"
+                  stroke="#242424"
+                  strokeOpacity={0.4}
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
